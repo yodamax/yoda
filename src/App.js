@@ -47,7 +47,8 @@ class App extends React.Component {
 
     loaded(response) {
         if(this.state.session == "new") {
-            window.location.href = window.location.href + "/" + JSON.parse(response).session;
+            window.location.href = window.location.href + JSON.parse(response).session;
+            window.location.reload()
         }
         else {
             window.location.reload();

@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
 } from "react-router-dom";
@@ -14,8 +14,8 @@ ReactDOM.render(
       <Router>
           <div>
               <Switch>
-                  <Route path="/app/:id" component={App}/>
-                  <Route path="/app" component={App}/>
+                  <Route path="/:id" component={App}/>
+                  <Route path="/" component={App}/>
               </Switch>
           </div>
       </Router>
